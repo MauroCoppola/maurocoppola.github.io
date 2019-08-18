@@ -1,58 +1,36 @@
-# Set theme
-remote_theme: daviddarnes/alembic
-
-# File excludes
-exclude:
-- README.md
-- Gemfile
-- Gemfile.lock
-
-# Set plugins
-plugins:
-- jekyll-sitemap
-- jekyll-mentions
-- jekyll-paginate
-- jekyll-seo-tag
-- jekyll-redirect-from
-- jekyll-default-layout
-- jekyll-feed
-- jemoji
-- jekyll-remote-theme
-
 # Site settings
-url: 'https://maurocoppola.github.io'
-baseurl: ''
-title: 'Mauro Coppola'
-description: 'A personal blog about development'
-permalink: pretty
-logo: ""
+title:          Mauro Coppola
+description:    "A personal blog about software development"
+url:            "https://maurocoppola.github.io"
 
-# Pagination
-paginate: 5
-paginate_path: blog/page:num
+# Google Analytics
+google_analytics: UA—XXXXXXXX-X
 
-# Header nav
-navigation_header:
-- title: Home
-  url: /
-- title: About
-  url: /about/
-- title: Blog
-  url: /blog/
-- title: Categories
-  url: /categories/
+# Author
+author:
+  name:         Mauro Coppola
+  url:          https://maurocoppola.github.io
 
-# Footer nav
-navigation_footer:
-- title: Back to top
-  url: "#top"
+# Build settings
+markdown:       kramdown
+include:
+  - _pages
 
-# Collections
-collections:
-  posts:
-    title: Posts
-    output: true
-    description: "My thoughts and ideas"
-    feature_text: |
-      Welcome to my blog
-    feature_image: "https://picsum.photos/2560/600?image=866"
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
+
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
